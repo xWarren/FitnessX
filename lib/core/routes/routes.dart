@@ -1,4 +1,5 @@
 class Routes {
+  static const getstarted = '/getstarted';
   static const onboarding = '/onboarding';
-  static const onboardingpageview = '/onboardingpageview';
+  static const register = '/register';
 }
