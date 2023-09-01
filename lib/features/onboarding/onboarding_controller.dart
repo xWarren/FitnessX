@@ -1,9 +1,42 @@
-import 'package:fitness_x/core/data/models/onboarding_models.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../core/data/models/onboarding_models.dart';
 import '../../core/resources/assets.dart';
+import '../../core/routes/routes.dart';
 
-class OnboardingController extends GetxController {
+class OnboardingController extends GetxController
+    with GetTickerProviderStateMixin {
+  AnimationController? animationController;
+  final pageController = PageController();
+  RxInt currentPageIndex = 0.obs;
+  RxInt pageIndex = 0.obs;
+  final kCurve = Curves.linear;
+  @override
+  void dispose() {
+    super.dispose();
+    animationController?.dispose();
+  }
+
+  @override
+  void onInit() {
+    super.onInit();
+    animationController =
+        AnimationController(duration: const Duration(seconds: 2), vsync: this);
+    animationController?.repeat();
+  }
+
+  void onPageChanged(index) {
+    currentPageIndex.value = index;
+    update();
+  }
+
+  void goToPage() {
+    if (currentPageIndex.value == 3) {
+      Get.offNamedUntil(Routes.register, (route) => false);
+    }
+  }
+
   List onboarding = [
     const OnboardingModels(
         imageUrl: Assets.onboard1,

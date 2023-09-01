@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../core/resources/assets.dart';
-import '../../core/resources/colors.dart' as colors;
-import '../../core/routes/routes.dart';
+import '_components/onboardin_pageview.dart';
+import '_components/onboarding_circular.dart';
 import 'onboarding_controller.dart';
 
 class OnboardingPage extends GetView<OnboardingController> {
@@ -12,49 +11,18 @@ class OnboardingPage extends GetView<OnboardingController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Image.asset(
-              Assets.logo,
-              height: 70,
-              width: 185,
-              fit: BoxFit.fill,
-            )
-          ],
+      body: Column(children: [
+        OnboardingPageView(
+          controller: controller,
+          pageController: controller.pageController,
+          onPageChanged: controller.onPageChanged,
         ),
-      ),
-      bottomSheet: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Container(
-            width: Get.width / 1.4,
-            height: 50,
-            margin: const EdgeInsets.symmetric(vertical: 20),
-            child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                elevation: 5,
-                backgroundColor: colors.brandColor,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(99),
-                ),
-              ),
-              onPressed: () {
-                Get.offAndToNamed(Routes.onboardingpageview);
-              },
-              child: const Text(
-                "Get Started",
-                style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
-                  color: colors.white,
-                ),
-              ),
-            ),
-          )
-        ],
-      ),
+        OnboardingCircular(
+          goToPage: controller.goToPage,
+          kCurve: controller.kCurve,
+          pageController: controller.pageController,
+        ),
+      ]),
     );
   }
 }
