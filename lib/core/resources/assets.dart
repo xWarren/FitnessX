@@ -18,4 +18,15 @@ abstract class Assets {
   static const ichide = "${path}ic_hide.png";
   static const google = "${path}google.png";
   static const facebook = "${path}facebook.png";
+  static const cm = "${path}button_cm.png";
+  static const kg = "${path}button_kg.png";
+  static const icdown = "${path}ic_down.png";
+  static const icheight = "${path}ic_height.png";
+  static const iccalendar = "${path}ic_calendar.png";
+  static const icuser = "${path}ic_user.png";
+  static const icscale = "${path}ic_scale.png";
+  static const register = "${path}register.png";
+  static const register2 = "${path}register2.png";
+  static const register3 = "${path}register3.png";
+  static const register4 = "${path}register4.png";
 }

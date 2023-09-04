@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 
 import '../../core/resources/assets.dart';
 import '../../core/resources/colors.dart' as colors;
+import '../../core/resources/strings.dart' as strings;
 import '../../core/routes/routes.dart';
 import 'getstarted_controller.dart';
 
@@ -44,7 +45,7 @@ class GetStartedPage extends GetView<GetStartedController> {
                 Get.offAndToNamed(Routes.onboarding);
               },
               child: const Text(
-                "Get Started",
+                strings.getStarted,
                 style: TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.bold,

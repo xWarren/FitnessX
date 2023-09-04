@@ -21,6 +21,7 @@ class OnboardingPage extends GetView<OnboardingController> {
           goToPage: controller.goToPage,
           kCurve: controller.kCurve,
           pageController: controller.pageController,
+          controller: controller,
         ),
       ]),
     );
