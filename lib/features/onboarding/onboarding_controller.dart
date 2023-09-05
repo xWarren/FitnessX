@@ -12,11 +12,6 @@ class OnboardingController extends GetxController
   RxInt currentPageIndex = 0.obs;
   RxInt pageIndex = 0.obs;
   final kCurve = Curves.linear;
-  @override
-  void dispose() {
-    super.dispose();
-    animationController?.dispose();
-  }
 
   @override
   void onInit() {
@@ -35,6 +30,12 @@ class OnboardingController extends GetxController
     if (currentPageIndex.value == 3) {
       Get.offNamedUntil(Routes.register, (route) => false);
     }
+  }
+
+  @override
+  void dispose() {
+    animationController?.dispose();
+    super.dispose();
   }
 
   List onboarding = [
