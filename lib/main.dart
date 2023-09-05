@@ -21,6 +21,8 @@ class MyApp extends StatelessWidget {
           backgroundColor: colors.white,
           elevation: 0,
         ),
+        bottomSheetTheme:
+            const BottomSheetThemeData(backgroundColor: colors.white),
         scaffoldBackgroundColor: colors.white,
       ),
       initialRoute: Routes.getstarted,
