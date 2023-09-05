@@ -6,6 +6,7 @@ import '../../../../core/resources/assets.dart';
 import '../../../../core/resources/colors.dart' as colors;
 import '../../../../core/resources/strings.dart' as strings;
 import '../../../../core/resources/text_styles.dart' as styles;
+import '../../../../core/routes/routes.dart';
 
 class RegisterBody extends StatelessWidget {
   final dynamic controller;
@@ -73,8 +74,7 @@ class RegisterBody extends StatelessWidget {
         const SizedBox(width: 5),
         GestureDetector(
           onTap: () {
-            // ignore: avoid_print
-            print("Tapped");
+            Get.toNamed(Routes.login);
           },
           child: const Text(
             strings.login,
@@ -228,40 +228,52 @@ class RegisterBody extends StatelessWidget {
                 controller.terms.value = !controller.terms.value;
               },
             ),
-            const Expanded(
+            Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Wrap(
                     children: [
-                      Text(
+                      const Text(
                         strings.continuing,
                         style: TextStyle(
                           fontSize: 14,
                           color: colors.gray2,
                         ),
                       ),
-                      Text(
-                        strings.privacyPolicy,
-                        style: TextStyle(
-                          fontSize: 14,
-                          color: colors.gray2,
-                          decoration: TextDecoration.underline,
+                      GestureDetector(
+                        onTap: () {
+                          // ignore: avoid_print
+                          print("Tapped");
+                        },
+                        child: const Text(
+                          strings.privacyPolicy,
+                          style: TextStyle(
+                            fontSize: 14,
+                            color: colors.secondaryColor,
+                            decoration: TextDecoration.underline,
+                          ),
                         ),
                       ),
-                      Text(
+                      const Text(
                         strings.and,
                         style: TextStyle(
                           fontSize: 14,
                           color: colors.gray2,
                         ),
                       ),
-                      Text(
-                        strings.term,
-                        style: TextStyle(
-                          fontSize: 14,
-                          color: colors.gray2,
-                          decoration: TextDecoration.underline,
+                      GestureDetector(
+                        onTap: () {
+                          // ignore: avoid_print
+                          print("Tapped");
+                        },
+                        child: const Text(
+                          strings.term,
+                          style: TextStyle(
+                            fontSize: 14,
+                            color: colors.secondaryColor,
+                            decoration: TextDecoration.underline,
+                          ),
                         ),
                       ),
                     ],

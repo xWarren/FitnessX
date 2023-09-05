@@ -1,7 +1,9 @@
-import 'package:fitness_x/core/routes/pages.dart';
-import 'package:fitness_x/core/routes/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+import 'core/resources/colors.dart ' as colors;
+import 'core/routes/pages.dart';
+import 'core/routes/routes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +16,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(),
+      theme: ThemeData(
+        appBarTheme: const AppBarTheme(
+          backgroundColor: colors.white,
+          elevation: 0,
+        ),
+        scaffoldBackgroundColor: colors.white,
+      ),
       initialRoute: Routes.getstarted,
       getPages: Pages.pages,
     );

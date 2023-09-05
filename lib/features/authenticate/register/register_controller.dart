@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 
 import '../../../core/data/models/register_models.dart';
 import '../../../core/resources/assets.dart';
+import '../../../core/resources/colors.dart' as colors;
 import '../../../core/resources/strings.dart' as strings;
 
 class RegisterController extends GetxController {
@@ -25,18 +26,22 @@ class RegisterController extends GetxController {
 
   List profile = [
     const RegisterModels(
-        imageUrl: Assets.register2,
-        title: strings.improveShape,
-        description: strings.improveShape1),
+      imageUrl: Assets.register2,
+      title: strings.improveShape,
+      description: strings.improveShape1,
+      color: colors.brandColor,
+    ),
     const RegisterModels(
       imageUrl: Assets.register3,
       title: strings.leanAndTone,
       description: strings.leanAndTone1,
+      color: colors.secondaryColor,
     ),
     const RegisterModels(
       imageUrl: Assets.register4,
       title: strings.loseAFat,
       description: strings.loseAFat1,
+      color: colors.brandColor,
     ),
   ];
 

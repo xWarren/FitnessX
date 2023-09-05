@@ -11,7 +11,7 @@ const String password = "Password";
 const String continuing = "By continuing you accept our";
 const String privacyPolicy = " Privacy Policy";
 const String and = " and";
-const String term = "Term of Use";
+const String term = "Term of Use.";
 const String register = "Register";
 const String login = "Login";
 const String alreadyHave = "Already have an account?";
@@ -32,3 +32,20 @@ const String leanAndTone1 =
 const String loseAFat = "Lose a Fat";
 const String loseAFat1 =
     "I have over 20 lbs to lose. I want to drop all this fat and gain muscle mass";
+const String goal = "What is your goal ?";
+const String itWillHelp = "It will help us to choose a best program for you";
+const String confirm = "Confirm";
+
+/* LOGIN */
+const String welcomeBack = "Welcome Back";
+const String forgotPassword = "Forgot your password?";
+const String donthave = "Don't have an account yet?";
+
+/* HOME */
+const String welcome = "Welcome, ";
+const String youAre =
+    "You are all set now, let’s reach your goals together with us";
+const String goToHome = "Go To Home";
+const String welcomeBackHome = "Welcome Back,";
+const String warren = "Warren";
+const String warrenVirgines = "Warren Virgines";
