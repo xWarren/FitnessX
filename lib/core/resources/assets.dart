@@ -42,6 +42,8 @@ abstract class Assets {
   static const lowerbody = "${path}lowerbody.png";
   static const ab = "${path}ab.png";
   static const icnotification = "${path}ic_notification.png";
+  static const sleepGraph = "${path}sleep_graph.png";
+  static const icDownWhite = "${path}ic_down_white.png";
 
   /* DASHBOARD */
   static const home = "${path}ic_home.png";
@@ -54,4 +56,17 @@ abstract class Assets {
   static const searchfilled = "${path}ic_search_filled.png";
   static const camerafilled = "${path}ic_camera_filled.png";
   static const profile2filled = "${path}ic_profile2_filled.png";
+
+  /* PROFILE */
+  static const imageProfile = "${path}ic_image_profile.png";
+  static const userProfile = "${path}ic_user_profile.png";
+  static const documentProfile = "${path}ic_document_profile.png";
+  static const activityProfile = "${path}ic_activity_profile.png";
+  static const workoutProfile = "${path}ic_workout_profile.png";
+  static const notificationProfile = "${path}ic_notification_profile.png";
+  static const messageProfile = "${path}ic_message_profile.png";
+  static const privacyProfile = "${path}ic_privacy_profile.png";
+  static const settingsProfile = "${path}ic_setting_profile.png";
+  static const nextProfile = "${path}ic_arrow_profile.png";
+  static const detailProfile = "${path}ic_detail_profile.png";
 }
