@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 const Color brandColor = Color.fromRGBO(146, 163, 253, 1);
+const Color caloriesColor = Color.fromRGBO(197, 139, 242, 1);
 const Color secondaryColor = Color.fromRGBO(197, 139, 242, 1);
 const Color tertiaryColor = Color.fromRGBO(146, 164, 253, 0.435);
 const Color white = Color(0xFFFFFFFF);

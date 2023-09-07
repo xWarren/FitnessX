@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
 import '../../../core/resources/assets.dart';
@@ -14,6 +15,17 @@ class ProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        systemOverlayStyle: const SystemUiOverlayStyle(
+          statusBarColor: colors.white,
+          statusBarIconBrightness: Brightness.dark,
+        ),
+        leading: GestureDetector(
+            onTap: () {
+              Get.back();
+            },
+            child: Image.asset(Assets.icexit)),
+      ),
       body: SingleChildScrollView(
         child: SafeArea(
           child: Form(
@@ -23,7 +35,7 @@ class ProfilePage extends StatelessWidget {
                 children: [
                   Image.asset(
                     Assets.register,
-                    height: 350,
+                    height: 250,
                     fit: BoxFit.fill,
                   ),
                   const SizedBox(height: 20),

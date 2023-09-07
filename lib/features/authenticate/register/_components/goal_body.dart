@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import '../../../../core/resources/colors.dart' as colors;
 import '../../../../core/resources/strings.dart' as strings;
 import '../../../../core/resources/text_styles.dart' as styles;
+import '../../../../core/routes/routes.dart';
 
 class GoalBody extends StatelessWidget {
   final dynamic controller;
@@ -52,7 +53,7 @@ class GoalBody extends StatelessWidget {
                                     borderRadius: BorderRadius.circular(20))),
                             child: Column(
                               children: [
-                                const SizedBox(height: 50),
+                                const SizedBox(height: 10),
                                 Image.asset(
                                   data.imageUrl,
                                   height: 290,
@@ -89,7 +90,7 @@ class GoalBody extends StatelessWidget {
                                     ),
                                   ),
                                 ),
-                                const SizedBox(height: 50),
+                                const SizedBox(height: 10),
                               ],
                             ),
                           ),
@@ -109,7 +110,9 @@ class GoalBody extends StatelessWidget {
                     const EdgeInsets.symmetric(vertical: 30, horizontal: 20),
                 width: Get.width,
                 child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Get.offAndToNamed(Routes.welcome);
+                    },
                     style: ElevatedButton.styleFrom(
                         backgroundColor: colors.brandColor,
                         shadowColor: colors.brandColor,
