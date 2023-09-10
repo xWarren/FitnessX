@@ -6,6 +6,7 @@ import '../../core/resources/assets.dart';
 import '../../core/resources/colors.dart' as colors;
 import '../../core/resources/strings.dart' as strings;
 import '../../core/resources/text_styles.dart' as styles;
+import 'comparison/comparison_page.dart';
 import 'progress_tracker_controller.dart';
 
 class ProgressTrackerPage extends GetView<ProgressTrackerController> {
@@ -162,7 +163,9 @@ class ProgressTrackerPage extends GetView<ProgressTrackerController> {
                       ),
                     ),
                     ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Get.to(ComparisonPage(controller: controller));
+                        },
                         style: ElevatedButton.styleFrom(
                             backgroundColor: colors.brandColor,
                             shape: RoundedRectangleBorder(
@@ -258,6 +261,14 @@ class ProgressTrackerPage extends GetView<ProgressTrackerController> {
             )
           ],
         ),
+      ),
+      floatingActionButton: InkWell(
+        borderRadius: BorderRadius.circular(20.0),
+        onTap: () {},
+        child: CircleAvatar(
+            maxRadius: 30,
+            backgroundColor: colors.secondaryColor,
+            child: Image.asset(Assets.cameraWhite)),
       ),
     );
   }

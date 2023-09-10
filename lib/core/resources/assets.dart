@@ -81,4 +81,5 @@ abstract class Assets {
   static const reminder = "${path}reminder.png";
   static const icShare = "${path}ic_share.png";
   static const icBack = "${path}ic_back.png";
+  static const cameraWhite = "${path}ic_camera_white.png";
 }

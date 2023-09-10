@@ -31,9 +31,9 @@ class SleepTrackerPage extends GetView<SleepTrackerController> {
                   onTap: () {}, child: Image.asset(Assets.detailProfile)),
             )
           ]),
-      body: Column(
+      body: const Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: [Text("Sleep Tracker Screen")],
+        children: [Center(child: Text("Sleep Tracker Screen"))],
       ),
     );
   }
