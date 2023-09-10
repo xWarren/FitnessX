@@ -24,6 +24,7 @@ class MyApp extends StatelessWidget {
         bottomSheetTheme:
             const BottomSheetThemeData(backgroundColor: colors.white),
         scaffoldBackgroundColor: colors.white,
+        fontFamily: "Poppins",
       ),
       initialRoute: Routes.getstarted,
       getPages: Pages.pages,

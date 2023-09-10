@@ -69,4 +69,16 @@ abstract class Assets {
   static const settingsProfile = "${path}ic_setting_profile.png";
   static const nextProfile = "${path}ic_arrow_profile.png";
   static const detailProfile = "${path}ic_detail_profile.png";
+
+  /* PROGRESS TRACKER */
+  static const leftfacing = "${path}leftfacing.png";
+  static const leftfacing2 = "${path}leftfacing2.png";
+  static const rightfacing = "${path}rightfacing.png";
+  static const backfacing = "${path}backfacing.png";
+  static const frontfacing = "${path}frontfacing.png";
+  static const frontfacing2 = "${path}frontfacing2.png";
+  static const calendar = "${path}calendar.png";
+  static const reminder = "${path}reminder.png";
+  static const icShare = "${path}ic_share.png";
+  static const icBack = "${path}ic_back.png";
 }
