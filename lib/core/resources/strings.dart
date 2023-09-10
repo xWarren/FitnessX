@@ -58,6 +58,9 @@ const String latestWorkout = "Latest Workout";
 const String sleep = "Sleep";
 const String activityStatus = "Activity Status";
 
+/* SLEEP TRACKER */
+const String sleepTracker = "Sleep Tracker";
+
 /* PROFILE */
 const String profile = "Profile";
 const String personalData = "Personal Data";
@@ -74,3 +77,17 @@ const String age = "Age";
 const String account = "Account";
 const String notification = "Notification";
 const String other = "Other";
+
+/* PROGRESS TRACKER */
+const String progressPhoto = "Progress Photo";
+const String reminder = "Reminder!";
+const String nextPhotos = "Next Photos Fall On July 08";
+const String trackYourProgress = "Track Your Progress Each";
+const String monthPhoto = "Month With";
+const String learnMore = "Learn More";
+const String comparePhoto = "Compare my Photo";
+const String compare = "Compare";
+const String gallery = "Gallery";
+const String seeMore = "See more";
+const String june = "2 June";
+const String may = "5 May";
