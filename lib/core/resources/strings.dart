@@ -91,3 +91,4 @@ const String gallery = "Gallery";
 const String seeMore = "See more";
 const String june = "2 June";
 const String may = "5 May";
+const String comparison = "Comparison";
