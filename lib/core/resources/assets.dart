@@ -57,6 +57,9 @@ abstract class Assets {
   static const camerafilled = "${path}ic_camera_filled.png";
   static const profile2filled = "${path}ic_profile2_filled.png";
 
+  /* SEARCH TRACKER */
+  static const icSearch = "${path}ic_search_gray.png";
+
   /* PROFILE */
   static const imageProfile = "${path}ic_image_profile.png";
   static const userProfile = "${path}ic_user_profile.png";

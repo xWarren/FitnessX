@@ -9,11 +9,13 @@ import '_components/home_body.dart';
 import 'home_controller.dart';
 
 class HomePage extends GetView<HomeController> {
-  const HomePage({super.key});
+  final ScrollController scroll;
+  const HomePage({required this.scroll, super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        resizeToAvoidBottomInset: true,
         appBar: PreferredSize(
           preferredSize: const Size.fromHeight(80.0),
           child: Row(
@@ -48,6 +50,11 @@ class HomePage extends GetView<HomeController> {
             ],
           ),
         ),
-        body: HomeBody(controller: controller));
+        body: SingleChildScrollView(
+          controller: scroll,
+          child: HomeBody(
+            controller: controller,
+          ),
+        ));
   }
 }

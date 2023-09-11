@@ -58,6 +58,8 @@ const String latestWorkout = "Latest Workout";
 const String sleep = "Sleep";
 const String activityStatus = "Activity Status";
 
+/* SEARCH */
+const String search = "Search";
 /* SLEEP TRACKER */
 const String sleepTracker = "Sleep Tracker";
 

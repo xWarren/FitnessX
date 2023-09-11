@@ -20,6 +20,7 @@ class ProfileScreen extends GetView<ProfileController> {
               statusBarColor: colors.white,
               statusBarIconBrightness: Brightness.dark,
             ),
+            automaticallyImplyLeading: false,
             centerTitle: true,
             title: const Text(
               strings.profile,

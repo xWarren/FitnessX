@@ -15,64 +15,77 @@ class DashboardPage extends GetView<DashboardController> {
 
   @override
   Widget build(BuildContext context) {
+    List<Widget> contents = [
+      HomePage(scroll: controller.scrollController),
+      const SleepTrackerPage(),
+      const SearchPage(),
+      const ProgressTrackerPage(),
+      const ProfileScreen()
+    ];
     return LayoutBuilder(
       builder: (context, constraints) => Obx(
         () => Scaffold(
-          body: controller.contents[controller.currentPageIndex.value],
-          bottomNavigationBar: BottomAppBar(
-            elevation: 15,
-            color: colors.white,
-            child: Row(
-              children: [
-                const Spacer(),
-                IconButton(
-                    icon: Image.asset(
-                      controller.currentPageIndex.value == 0
-                          ? Assets.homefilled
-                          : Assets.home,
-                    ),
-                    onPressed: () {
-                      controller.currentScreen = const HomePage();
-                      controller.currentPageIndex.value = 0;
-                    }),
-                const Spacer(),
-                IconButton(
-                    icon: Image.asset(
-                      controller.currentPageIndex.value == 1
-                          ? Assets.activityfilled
-                          : Assets.activity,
-                    ),
-                    onPressed: () {
-                      controller.currentScreen = const SleepTrackerPage();
-                      controller.currentPageIndex.value = 1;
-                    }),
-                const Spacer(),
-                const Spacer(),
-                const Spacer(),
-                const Spacer(),
-                IconButton(
-                    icon: Image.asset(
-                      controller.currentPageIndex.value == 3
-                          ? Assets.camerafilled
-                          : Assets.camera,
-                    ),
-                    onPressed: () {
-                      controller.currentScreen = const ProgressTrackerPage();
-                      controller.currentPageIndex.value = 3;
-                    }),
-                const Spacer(),
-                IconButton(
-                    icon: Image.asset(
-                      controller.currentPageIndex.value == 4
-                          ? Assets.profile2filled
-                          : Assets.profile2,
-                    ),
-                    onPressed: () {
-                      controller.currentScreen = const ProfileScreen();
-                      controller.currentPageIndex.value = 4;
-                    }),
-                const Spacer(),
-              ],
+          body: contents[controller.currentPageIndex.value],
+          bottomNavigationBar: AnimatedContainer(
+            duration: const Duration(milliseconds: 300),
+            height:
+                controller.isVisible.value ? kBottomNavigationBarHeight : 0.0,
+            child: BottomAppBar(
+              elevation: 15,
+              color: colors.white,
+              child: Row(
+                children: [
+                  const Spacer(),
+                  IconButton(
+                      icon: Image.asset(
+                        controller.currentPageIndex.value == 0
+                            ? Assets.homefilled
+                            : Assets.home,
+                      ),
+                      onPressed: () {
+                        controller.currentScreen =
+                            HomePage(scroll: controller.scrollController);
+                        controller.currentPageIndex.value = 0;
+                      }),
+                  const Spacer(),
+                  IconButton(
+                      icon: Image.asset(
+                        controller.currentPageIndex.value == 1
+                            ? Assets.activityfilled
+                            : Assets.activity,
+                      ),
+                      onPressed: () {
+                        controller.currentScreen = const SleepTrackerPage();
+                        controller.currentPageIndex.value = 1;
+                      }),
+                  const Spacer(),
+                  const Spacer(),
+                  const Spacer(),
+                  const Spacer(),
+                  IconButton(
+                      icon: Image.asset(
+                        controller.currentPageIndex.value == 3
+                            ? Assets.camerafilled
+                            : Assets.camera,
+                      ),
+                      onPressed: () {
+                        controller.currentScreen = const ProgressTrackerPage();
+                        controller.currentPageIndex.value = 3;
+                      }),
+                  const Spacer(),
+                  IconButton(
+                      icon: Image.asset(
+                        controller.currentPageIndex.value == 4
+                            ? Assets.profile2filled
+                            : Assets.profile2,
+                      ),
+                      onPressed: () {
+                        controller.currentScreen = const ProfileScreen();
+                        controller.currentPageIndex.value = 4;
+                      }),
+                  const Spacer(),
+                ],
+              ),
             ),
           ),
           floatingActionButton: FloatingActionButton(

@@ -20,6 +20,7 @@ class ProgressTrackerPage extends GetView<ProgressTrackerController> {
             statusBarColor: colors.white,
             statusBarIconBrightness: Brightness.dark,
           ),
+          automaticallyImplyLeading: false,
           centerTitle: true,
           title: const Text(
             strings.progressPhoto,

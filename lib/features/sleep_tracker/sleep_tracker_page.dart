@@ -19,6 +19,7 @@ class SleepTrackerPage extends GetView<SleepTrackerController> {
             statusBarColor: colors.white,
             statusBarIconBrightness: Brightness.dark,
           ),
+          automaticallyImplyLeading: false,
           centerTitle: true,
           title: const Text(
             strings.sleepTracker,
